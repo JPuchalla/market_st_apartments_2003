@@ -1,6 +1,11 @@
 class Apartment
-  attr_reader :number
-  def initialize(number)
-    @number = number
+
+  def initialize(unit)
+    @unit = unit
+  end
+
+
+  def number
+    @unit[:number]
   end
 end
