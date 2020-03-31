@@ -14,6 +14,7 @@ class RenterTest < Minitest::Test
 
   def test_for_attributes
     assert_equal "A1",  @unit1.number
-    
+    assert_equal 1200, @unit1.monthly_rent
+
   end
 end
