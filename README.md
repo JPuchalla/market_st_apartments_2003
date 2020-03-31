@@ -55,14 +55,7 @@ Use TDD to create a Renter class and an Apartment class that respond to the foll
 Use TDD to create a Building class that responds to the following interaction pattern.
 
 ```ruby
- require './lib/renter'
-# => true
 
- require './lib/apartment'
-# => true
-
- require './lib/building'
-# => true
 
  building = Building.new
 # => #<Building:0x00007f83778c5a80...>
