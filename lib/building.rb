@@ -37,6 +37,10 @@ class Building
    end
   end
 
-
-
+  def renter_with_highest_rent
+   highest_rented = rented_units.map do
+     |unit| unit.monthly_rent
+     #didn't pass obiously
+   end
+  end
 end

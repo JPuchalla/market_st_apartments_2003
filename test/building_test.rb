@@ -58,4 +58,14 @@ class RenterTest < Minitest::Test
     @unit2.add_renter(@renter3)
     assert_equal [@unit2], @building.rented_units
   end
+
+  def test_if_it_can_find_renter_with_highest_rent
+    @unit1.add_renter(@renter3)
+    assert_equal [@renter3], @building.renter_with_highest_rent
+    @unit3.add_renter(@renter4)
+    assert_equal [@renter3], @building.renter_with_highest_rent
+    @unit3.add_renter(@renter5)
+    @building.add_unit(@unit4)
+    assert_equal [@renter3], @building.renter_with_highest_rent
+  end
 end
