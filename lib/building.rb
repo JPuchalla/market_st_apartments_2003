@@ -22,5 +22,8 @@ class Building
       # removes nil values
   end
 
-  
+  def average_rent
+    require "pry"; binding.pry
+  end
+
 end
