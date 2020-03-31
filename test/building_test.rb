@@ -15,6 +15,13 @@ class RenterTest < Minitest::Test
 
   def test_it_exists
     assert_instance_of Building, @building
+  end
+
+  def test_if_units_returns_empty_then_fills_after_adding_units
+    assert_equal [], @building.units
+    @building.add_unit(@unit1)
+    @building.add_unit(@unit2)
+    assert_equal [@unit1, @unit2], @building.units
 
   end
 end
