@@ -30,4 +30,13 @@ class Building
     average_rent_of_units.sum / @units.length
   end
 
+  def rented_units
+   @units.select do
+     |unit| !unit.renter.nil?
+     # require "pry"; binding.pry
+   end
+  end
+
+
+
 end
