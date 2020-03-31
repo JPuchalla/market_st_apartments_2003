@@ -23,7 +23,11 @@ class Building
   end
 
   def average_rent
-    require "pry"; binding.pry
+    average_rent_of_units = []
+    @units.each do
+      |unit| average_rent_of_units << unit.monthly_rent.to_f
+    end
+    average_rent_of_units.sum / @units.length
   end
 
 end
